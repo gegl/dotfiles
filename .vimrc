@@ -19,6 +19,8 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'kana/vim-textobj-user' 
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-bundler'
 
 let mapleader = ","
 
