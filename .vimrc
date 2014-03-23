@@ -43,9 +43,6 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-" C-] to navigate help on Norwegian keyboard is difficult
-nnoremap t <C-]>
-
 " Ease ESCaping insert mode
 :imap jj <Esc>
 
