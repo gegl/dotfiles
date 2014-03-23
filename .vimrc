@@ -76,9 +76,6 @@ set expandtab
 " Always save on buffer updates
 let g:auto_save = 1  
 
-" Always save on buffer updates
-let g:auto_save = 1  
-
 " Turn off automatic setting of CtrlP work dir on each invocation
 let g:ctrlp_working_path_mode = 0
 
