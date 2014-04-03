@@ -69,6 +69,7 @@ set nowrap
 set tabstop=2
 set shiftwidth=2
 set expandtab
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Always save on buffer updates
 let g:auto_save = 1  
