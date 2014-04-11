@@ -88,3 +88,7 @@ set hlsearch
 
 " We want numbered lines
 set nu
+
+" Add files that should use Ruby syntax highlighting etc
+autocmd BufNewFile,BufRead *.cap set filetype=ruby
+autocmd BufNewFile,BufRead *.eye set filetype=ruby
