@@ -23,6 +23,7 @@ Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-bundler'
 Bundle 'mileszs/ack.vim'
 Bundle 'slim-template/vim-slim'
+Bundle 'kchmck/vim-coffee-script'
 
 let mapleader = ","
 
