@@ -1,8 +1,8 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Core Bundle
 Bundle 'gmarik/vundle'
@@ -17,13 +17,16 @@ Bundle 'vim-scripts/vim-auto-save'
 Bundle 'tpope/vim-endwise'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
-Bundle 'kana/vim-textobj-user' 
+Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-bundler'
 Bundle 'mileszs/ack.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'kchmck/vim-coffee-script'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 let mapleader = ","
 
@@ -74,7 +77,7 @@ set expandtab
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Always save on buffer updates
-let g:auto_save = 1  
+let g:auto_save = 1
 
 " Turn off automatic setting of CtrlP work dir on each invocation
 let g:ctrlp_working_path_mode = 0
