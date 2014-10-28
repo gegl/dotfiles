@@ -95,7 +95,8 @@ set hlsearch
 set nu
 
 " Modified rspec cmd to be able ^t on individual specs with RSpec 3
-let g:rubytest_cmd_example = "rspec %p:%c"
+let g:rubytest_cmd_example = "bundle exec rspec %p:%c"
+let g:rubytest_cmd_spec = "bundle exec rspec %p"
 
 " Add files that should use Ruby syntax highlighting etc
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
