@@ -3,3 +3,15 @@
 	email = geir.gluckstad@fitnessgroup.no
 [core]
 	excludesfile = ~/.gitignore
+
+[alias]
+  st = status
+  ci = commit
+  cm = commit -am
+  br = checkout -b
+  co = checkout
+  df = diff
+  lg = log -p
+  aa = add .
+  p  = push
+  u  = up
