@@ -24,6 +24,7 @@ Bundle 'tpope/vim-bundler'
 Bundle 'mileszs/ack.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'bling/vim-airline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,7 +57,7 @@ filetype plugin indent on
 syntax enable
 set background=dark
 set t_Co=256
-let g:solarized_termcolors = 256
+let g:solarized_termcolors = 16
 colorscheme solarized
 
 " Fix issue with not able to open directories, ref:  https://github.com/scrooloose/nerdtree/issues/108
