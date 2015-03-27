@@ -58,7 +58,7 @@ syntax enable
 set background=dark
 set t_Co=256
 let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
+" let g:solarized_contrast = "high"
 let g:solarized_termcolors = 16
 colorscheme solarized
 
@@ -105,3 +105,11 @@ let g:rubytest_cmd_spec = "bundle exec rspec %p"
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
 autocmd BufNewFile,BufRead *.eye set filetype=ruby
 autocmd BufNewFile,BufRead *.arb set filetype=ruby
+
+" Ease navigating help
+autocmd Filetype help nnoremap <buffer> <CR> <C-]>
+autocmd Filetype help nnoremap <buffer> <BS> <C-T>
+autocmd Filetype help nnoremap <buffer> o /'\l\{2,\}'<CR>
+autocmd Filetype help nnoremap <buffer> O ?'\l\{2,\}'<CR>
+autocmd Filetype help nnoremap <buffer> s /\|\zs\S\+\ze\|<CR>
+autocmd Filetype help nnoremap <buffer> S ?\|\zs\S\+\ze\|<CR>
