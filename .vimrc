@@ -102,3 +102,4 @@ let g:rubytest_cmd_spec = "bundle exec rspec %p"
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
 autocmd BufNewFile,BufRead *.eye set filetype=ruby
 autocmd BufNewFile,BufRead *.arb set filetype=ruby
+autocmd BufNewFile,BufRead *.etl set filetype=ruby
