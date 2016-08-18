@@ -13,7 +13,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'ctrlp.vim'
 Bundle "scrooloose/nerdtree.git"
 Bundle 'janx/vim-rubytest'
-Bundle 'vim-scripts/vim-auto-save'
+Bundle '907th/vim-auto-save'
 Bundle 'tpope/vim-endwise'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
