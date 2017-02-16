@@ -1,4 +1,5 @@
 dotfiles
 ========
 
-Vim config
+- Vim config
+- GIT config
