@@ -1,6 +1,7 @@
 [user]
-	name = Geir Gluckstad
-	email = geir.gluckstad@fitnessgroup.no
+  name = Geir Gluckstad
+  email = geir.gluckstad@fitnessgroup.no
+
 [core]
 	excludesfile = ~/.gitignore
 
