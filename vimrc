@@ -3,28 +3,26 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
-" Core Bundle
-Bundle 'gmarik/vundle'
-
-" Your Bundles Here
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'ctrlp.vim'
-Bundle "scrooloose/nerdtree.git"
-Bundle 'janx/vim-rubytest'
-Bundle '907th/vim-auto-save'
-Bundle 'tpope/vim-endwise'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-surround'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-bundler'
-Bundle 'mileszs/ack.vim'
-Bundle 'slim-template/vim-slim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'bling/vim-airline'
+" Your Plugins Here
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'ctrlp.vim'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'janx/vim-rubytest'
+Plugin '907th/vim-auto-save'
+Plugin 'tpope/vim-endwise'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-bundler'
+Plugin 'mileszs/ack.vim'
+Plugin 'slim-template/vim-slim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'bling/vim-airline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -91,15 +89,12 @@ runtime macros/matchit.vim
 " Incremental searching is sexy
 set incsearch
 
-" Highlight things that we find with the search
-set hlsearch
-
 " We want numbered lines
 set nu
 
-" Modified rspec cmd to be able ^t on individual specs with RSpec 3
-let g:rubytest_cmd_example = "bundle exec rspec %p:%c"
-let g:rubytest_cmd_spec = "bundle exec rspec %p"
+" Modified rspec cmd to be use docker & rspec
+let g:rubytest_cmd_example = "docker-compose run --no-deps --rm -v $(PWD):/app -w /app ${PWD##*/} bundle exec rspec %p:%c"
+let g:rubytest_cmd_spec = "docker-compose run --no-deps --rm -v $(PWD):/app -w /app ${PWD##*/} bundle exec rspec %p"
 
 " Add files that should use Ruby syntax highlighting etc
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
