@@ -10,7 +10,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'ctrlp.vim'
 Plugin 'scrooloose/nerdtree.git'
-Plugin 'janx/vim-rubytest'
 Plugin '907th/vim-auto-save'
 Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/nerdcommenter'
@@ -102,6 +101,10 @@ function! DockerTransform(cmd) abort
 endfunction
 let g:test#custom_transformations = {'docker': function('DockerTransform')}
 let g:test#transformation = 'docker'
+
+map <leader>t :TestNearest<cr>
+map <leader>T :TestFile<cr>
+map <leader>l :TestLast<cr>
 
 " Add files that should use Ruby syntax highlighting etc
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
