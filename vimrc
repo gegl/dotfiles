@@ -23,6 +23,8 @@ Plugin 'mileszs/ack.vim'
 Plugin 'slim-template/vim-slim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'bling/vim-airline'
+Plugin 'pangloss/vim-javascript'
+Plugin 'janko-m/vim-test'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,8 +58,6 @@ syntax enable
 set background=dark
 set t_Co=256
 let g:solarized_visibility = "high"
-" let g:solarized_contrast = "high"
-let g:solarized_termcolors = 16
 colorscheme solarized
 
 " Fix issue with not able to open directories, ref:  https://github.com/scrooloose/nerdtree/issues/108
@@ -92,9 +92,16 @@ set incsearch
 " We want numbered lines
 set nu
 
-" Modified rspec cmd to be use docker & rspec
+" Modify rspec cmd to use docker & rspec
 let g:rubytest_cmd_example = "docker-compose run --no-deps --rm -v $(PWD):/app -w /app ${PWD##*/} bundle exec rspec %p:%c"
 let g:rubytest_cmd_spec = "docker-compose run --no-deps --rm -v $(PWD):/app -w /app ${PWD##*/} bundle exec rspec %p"
+
+" Modify vim-test cmds to run inside Docker using custom transformations
+function! DockerTransform(cmd) abort
+  return join(["docker-compose run --service-ports --no-deps --rm -v $(PWD):/app -w /app $(basename $(PWD))", a:cmd], " ")
+endfunction
+let g:test#custom_transformations = {'docker': function('DockerTransform')}
+let g:test#transformation = 'docker'
 
 " Add files that should use Ruby syntax highlighting etc
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
