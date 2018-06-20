@@ -82,6 +82,9 @@ let g:auto_save = 1
 " Turn off automatic setting of CtrlP work dir on each invocation
 let g:ctrlp_working_path_mode = 0
 
+" Ignore on fuzzy search
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
 " Extend % to work on keyword pairs
 runtime macros/matchit.vim
 
