@@ -24,6 +24,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'janko-m/vim-test'
+Plugin 'kburdett/vim-nuuid'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
