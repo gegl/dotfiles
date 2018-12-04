@@ -23,6 +23,7 @@ Plugin 'slim-template/vim-slim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'janko-m/vim-test'
 Plugin 'kburdett/vim-nuuid'
 
@@ -101,7 +102,8 @@ let g:rubytest_cmd_spec = "docker-compose run --no-deps --rm -v $(PWD):/app -w /
 
 " Modify vim-test cmds to run inside Docker using custom transformations
 function! DockerTransform(cmd) abort
-  return join(["docker-compose run --service-ports --no-deps --rm -v $(PWD):/app -w /app $(basename $(PWD))", a:cmd], " ")
+  "return join(["docker-compose run --service-ports --no-deps --rm -v $(PWD):/app -w /app $(basename $(PWD))", a:cmd], " ")
+  return join(["docker-compose run --no-deps --rm app", a:cmd], " ")
 endfunction
 let g:test#custom_transformations = {'docker': function('DockerTransform')}
 let g:test#transformation = 'docker'
