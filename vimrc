@@ -56,8 +56,9 @@ nnoremap k gk
 " Settings
 filetype plugin indent on
 syntax enable
-set background=dark
+let g:solarized_termcolors=256
 set t_Co=256
+set background=dark
 let g:solarized_visibility = "high"
 colorscheme solarized
 
