@@ -108,6 +108,9 @@ endfunction
 let g:test#custom_transformations = {'docker': function('DockerTransform')}
 let g:test#transformation = 'docker'
 
+" Modify JS mocha cmd to use local version
+let test#javascript#mocha#executable = 'node node_modules/.bin/mocha'
+
 map <leader>t :TestNearest<cr>
 map <leader>T :TestFile<cr>
 map <leader>l :TestLast<cr>
