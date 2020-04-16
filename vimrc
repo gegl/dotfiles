@@ -26,6 +26,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'janko-m/vim-test'
 Plugin 'kburdett/vim-nuuid'
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -110,6 +111,10 @@ let g:test#transformation = 'docker'
 
 " Modify JS mocha cmd to use local version
 let test#javascript#mocha#executable = 'node node_modules/.bin/mocha'
+
+" Terraform
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
 
 map <leader>t :TestNearest<cr>
 map <leader>T :TestFile<cr>
