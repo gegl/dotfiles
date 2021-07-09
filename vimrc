@@ -113,6 +113,9 @@ let g:test#transformation = 'docker'
 " Modify JS mocha cmd to use local version
 let test#javascript#mocha#executable = 'node node_modules/.bin/mocha'
 
+" Enable CSS syntax highlighting for lit-html
+let g:htl_css_templates = 1
+
 " Terraform - hmm, observed to delete lines
 " let g:terraform_align=1
 " let g:terraform_fmt_on_save=1
