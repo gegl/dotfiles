@@ -17,3 +17,5 @@
   aa = add .
   p  = push
   u  = up
+[push]
+	followTags = true
