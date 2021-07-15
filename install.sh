@@ -11,3 +11,6 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ln -sfv "$DOTFILES_DIR/vimrc" ~/.vimrc
 ln -sfv "$DOTFILES_DIR/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/gitignore" ~/.gitignore
+
+# Copy support for SQL syntax hightlighting inside ruby code
+cp -r ./after ~/.vim
