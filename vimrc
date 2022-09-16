@@ -28,6 +28,9 @@ Plugin 'janko-m/vim-test'
 Plugin 'kburdett/vim-nuuid'
 Plugin 'hashivim/vim-terraform'
 Plugin 'jonsmithers/vim-html-template-literals'
+Plugin 'tyru/open-browser.vim'
+Plugin 'aklt/plantuml-syntax'
+Plugin 'weirongxu/plantuml-previewer.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
