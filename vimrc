@@ -31,6 +31,8 @@ Plugin 'jonsmithers/vim-html-template-literals'
 Plugin 'tyru/open-browser.vim'
 Plugin 'aklt/plantuml-syntax'
 Plugin 'weirongxu/plantuml-previewer.vim'
+Plugin 'tpope/vim-dadbod'
+Plugin 'kristijanhusak/vim-dadbod-ui'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -140,3 +142,4 @@ autocmd Filetype help nnoremap <buffer> o /'\l\{2,\}'<CR>
 autocmd Filetype help nnoremap <buffer> O ?'\l\{2,\}'<CR>
 autocmd Filetype help nnoremap <buffer> s /\|\zs\S\+\ze\|<CR>
 autocmd Filetype help nnoremap <buffer> S ?\|\zs\S\+\ze\|<CR>
+
