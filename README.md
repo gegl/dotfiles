@@ -1,5 +1,5 @@
 dotfiles
 ========
 
-- Vim config
+- Neovim config
 - GIT config

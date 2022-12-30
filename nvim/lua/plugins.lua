@@ -57,6 +57,9 @@ function M.setup()
       end,
     }
 
+    -- Always save changes
+    use "pocco81/auto-save.nvim"
+
     -- Git
     use {
       "TimUntersberger/neogit",
