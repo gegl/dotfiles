@@ -20,6 +20,11 @@ opt.signcolumn = "yes" -- Always show sign column
 opt.clipboard = "unnamedplus" -- Access system clipboard
 opt.timeoutlen = 300 -- Time in milliseconds to wait for a mapped sequence to complete.
 opt.showmode = false -- Do not need to show the mode. We use the statusline instead.
+opt.swapfile = false
+opt.wrap = false
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
 
 -- Highlight on yank
 vim.cmd [[
