@@ -2,6 +2,12 @@ local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
+-- Easier window switching
+keymap("n", "<C-h>", "<C-w>h", default_opts)
+keymap("n", "<C-k>", "<C-k>k", default_opts)
+keymap("n", "<C-j>", "<C-j>j", default_opts)
+keymap("n", "<C-l>", "<C-w>l", default_opts)
+
 -- Better escape using jk in insert and terminal mode
 keymap("i", "jj", "<ESC>", default_opts)
 keymap("t", "jj", "<C-\\><C-n>", default_opts)
