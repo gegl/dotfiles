@@ -2,6 +2,9 @@ local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
+-- Open Telescope
+keymap("n", "<C-p>", ":Telescope find_files<CR>", default_opts)
+
 -- Easier window switching
 keymap("n", "<C-h>", "<C-w>h", default_opts)
 keymap("n", "<C-k>", "<C-k>k", default_opts)
