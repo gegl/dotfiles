@@ -8,7 +8,7 @@ keymap("n", "<C-k>", "<C-k>k", default_opts)
 keymap("n", "<C-j>", "<C-j>j", default_opts)
 keymap("n", "<C-l>", "<C-w>l", default_opts)
 
--- Better escape using jk in insert and terminal mode
+-- Better escape using jj in insert and terminal mode
 keymap("i", "jj", "<ESC>", default_opts)
 keymap("t", "jj", "<C-\\><C-n>", default_opts)
 
