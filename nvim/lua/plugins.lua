@@ -1,37 +1,124 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+local M = {}
 
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+function M.setup()
+  -- Indicate first time installation
+  local packer_bootstrap = false
 
-return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+  -- packer.nvim configuration
+  local conf = {
+    profile = {
+      enable = true,
+      threshold = 1, -- the amount in ms that a plugins load time must be over for it to be included in the profile
+    },
 
-  -- Simple plugins can be specified as strings
-  use 'rstacruz/vim-closer'
-  use 'scrooloose/nerdtree'
+    display = {
+      open_fn = function()
+        return require("packer.util").float { border = "rounded" }
+      end,
+    },
+  }
 
-  use 'vim-ruby/vim-ruby'
-  use 'kien/ctrlp.vim'
-  use '907th/vim-auto-save'
-  use 'tpope/vim-endwise'
-  use 'scrooloose/nerdcommenter'
-  use 'tpope/vim-surround'
-  use 'kana/vim-textobj-user'
-  use 'nelstrom/vim-textobj-rubyblock'
-  use 'tpope/vim-rake'
-  use 'tpope/vim-bundler'
-  use 'mileszs/ack.vim'
-  use 'pangloss/vim-javascript'
-  use 'mxw/vim-jsx'
-  use 'janko-m/vim-test'
-  use 'kburdett/vim-nuuid'
-  use 'hashivim/vim-terraform'
-  use 'jonsmithers/vim-html-template-literals'
-  use 'tyru/open-browser.vim'
-  use 'aklt/plantuml-syntax'
-  use 'weirongxu/plantuml-previewer.vim'
-  use 'tpope/vim-dadbod'
-  use 'kristijanhusak/vim-dadbod-ui'
-  use 'Mofiqul/dracula.nvim'
-end)
+  -- Check if packer.nvim is installed
+  -- Run PackerCompile if there are changes in this file
+  local function packer_init()
+    local fn = vim.fn
+    local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+    if fn.empty(fn.glob(install_path)) > 0 then
+      packer_bootstrap = fn.system {
+        "git",
+        "clone",
+        "--depth",
+        "1",
+        "https://github.com/wbthomason/packer.nvim",
+        install_path,
+      }
+      vim.cmd [[packadd packer.nvim]]
+    end
+    vim.cmd "autocmd BufWritePost plugins.lua source <afile> | PackerCompile"
+  end
+
+  -- Plugins
+  local function plugins(use)
+    use { "wbthomason/packer.nvim" }
+
+    -- Colorscheme
+    use {
+      "sainnhe/everforest",
+      config = function()
+        vim.cmd "colorscheme everforest"
+      end,
+    }
+
+    -- Startup screen
+    use {
+      "goolord/alpha-nvim",
+      config = function()
+        require("config.alpha").setup()
+      end,
+    }
+
+    -- Git
+    use {
+      "TimUntersberger/neogit",
+      cmd = "Neogit",
+      config = function()
+        require("config.neogit").setup()
+      end,
+    }
+
+    -- IndentLine
+    use {
+      "lukas-reineke/indent-blankline.nvim",
+      event = "BufReadPre",
+      config = function()
+        require("config.indentblankline").setup()
+      end,
+    }
+
+    -- Better icons
+    use {
+      "kyazdani42/nvim-web-devicons",
+      module = "nvim-web-devicons",
+      config = function()
+        require("nvim-web-devicons").setup { default = true }
+      end,
+    }
+
+    -- Better Comment
+    use {
+      "numToStr/Comment.nvim",
+      keys = { "gc", "gcc", "gbc" },
+      config = function()
+        require("Comment").setup {}
+      end,
+    }
+
+    -- Better surround
+    use { "tpope/vim-surround", event = "InsertEnter" }
+
+    -- nvim-tree
+    use {
+      "kyazdani42/nvim-tree.lua",
+      wants = "nvim-web-devicons",
+      cmd = { "NvimTreeToggle", "NvimTreeClose" },
+      module = "nvim-tree",
+      config = function()
+        require("config.nvimtree").setup()
+      end,
+    }
+
+    -- Bootstrap Neovim
+    if packer_bootstrap then
+      print "Restart Neovim required after installation!"
+      require("packer").sync()
+    end
+  end
+
+  -- Init and start packer
+  packer_init()
+  local packer = require "packer"
+  packer.init(conf)
+  packer.startup(plugins)
+end
+
+return M
