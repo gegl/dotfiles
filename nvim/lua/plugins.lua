@@ -132,6 +132,7 @@ function M.setup()
       requires = {
         "nvim-lua/popup.nvim",
         "nvim-lua/plenary.nvim",
+        "MunifTanjim/nui.nvim",
         { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
         "nvim-telescope/telescope-project.nvim",
         "cljoly/telescope-repo.nvim",
@@ -142,6 +143,14 @@ function M.setup()
             require("project_nvim").setup {}
           end,
         },
+        {
+          "jackMort/ChatGPT.nvim",
+          config = function()
+            require("chatgpt").setup({
+              -- optional configuration
+            })
+          end,
+        }
       },
     }
 
