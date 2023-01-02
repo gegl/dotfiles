@@ -197,7 +197,6 @@ function M.setup()
     use {
       "vim-test/vim-test",
       opt = true,
-      keys = { "<leader>t" },
       cmd = {
         "TestNearest",
         "TestFile",
