@@ -128,6 +128,7 @@ function M.setup()
         "telescope-repo.nvim",
         "telescope-file-browser.nvim",
         "project.nvim",
+        "nui.nvim",
       },
       requires = {
         "nvim-lua/popup.nvim",
