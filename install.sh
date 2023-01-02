@@ -12,6 +12,8 @@ ln -sfv "$DOTFILES_DIR/vimrc" ~/.vimrc
 ln -sfv "$DOTFILES_DIR/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/gitignore" ~/.gitignore
 ln -sfv "$DOTFILES_DIR/nvim" ~/.config/
+ln -sfv "$DOTFILES_DIR/zsh" ~/.config/
+ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
 
 # Copy support for SQL syntax hightlighting inside ruby code
 cp -r ./after ~/.vim
