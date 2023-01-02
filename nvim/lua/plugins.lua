@@ -194,6 +194,29 @@ function M.setup()
       end
     }
 
+    use {
+      "nvim-neotest/neotest",
+      opt = true,
+      wants = {
+        "plenary.nvim",
+        "nvim-treesitter",
+        "FixCursorHold.nvim",
+        "neotest-plenary",
+        "neotest-vim-test",
+      },
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-treesitter/nvim-treesitter",
+        "antoinemadec/FixCursorHold.nvim",
+        "nvim-neotest/neotest-plenary",
+        "nvim-neotest/neotest-vim-test",
+      },
+      module = { "neotest" },
+      config = function()
+        require("config.neotest").setup()
+      end,
+    }
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
