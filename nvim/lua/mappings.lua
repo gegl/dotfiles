@@ -5,8 +5,8 @@ local expr_opts = { noremap = true, expr = true, silent = true }
 -- Open Telescope
 keymap("n", "<C-p>", ":Telescope find_files<CR>", default_opts)
 
--- Easier window switching
-keymap("n", "<C-h>", "<C-w>h", default_opts)
+-- Easier window switching. TODO: C-h conflicts with coq plugin
+keymap("n", "<C-h>", "<C-w>h", default_opts) 
 keymap("n", "<C-k>", "<C-k>k", default_opts)
 keymap("n", "<C-j>", "<C-j>j", default_opts)
 keymap("n", "<C-l>", "<C-w>l", default_opts)
