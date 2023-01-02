@@ -166,6 +166,8 @@ function M.setup()
     }
 
     -- Completion
+    --
+    -- Note: requires python3-venv, see https://github.com/ms-jpq/coq_nvim#install
     use {
       "ms-jpq/coq_nvim",
       branch = "coq",
