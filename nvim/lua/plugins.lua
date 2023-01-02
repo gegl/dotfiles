@@ -60,15 +60,6 @@ function M.setup()
     -- Always save changes
     use "pocco81/auto-save.nvim"
 
-    -- Git
-    use {
-      "TimUntersberger/neogit",
-      cmd = "Neogit",
-      config = function()
-        require("config.neogit").setup()
-      end,
-    }
-
     -- IndentLine
     use {
       "lukas-reineke/indent-blankline.nvim",
