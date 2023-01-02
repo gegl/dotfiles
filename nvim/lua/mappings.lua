@@ -2,6 +2,13 @@ local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
+-- Testing
+keymap("n", "<Leader>t", ":TestNearest<CR>", default_opts)
+keymap("n", "<Leader>T", ":TestFile<CR>", default_opts)
+keymap("n", "<Leader>a", ":TestSuite<CR>", default_opts)
+keymap("n", "<Leader>l", ":TestLast<CR>", default_opts)
+keymap("n", "<Leader>g", ":TestVisit<CR>", default_opts)
+
 -- Open Telescope
 keymap("n", "<C-p>", ":Telescope find_files<CR>", default_opts)
 
