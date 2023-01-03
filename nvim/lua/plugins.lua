@@ -119,7 +119,6 @@ function M.setup()
         "telescope-repo.nvim",
         "telescope-file-browser.nvim",
         "project.nvim",
-        "nui.nvim",
       },
       requires = {
         "nvim-lua/popup.nvim",
@@ -135,14 +134,6 @@ function M.setup()
             require("project_nvim").setup {}
           end,
         },
-        {
-          "jackMort/ChatGPT.nvim",
-          config = function()
-            require("chatgpt").setup({
-              -- optional configuration
-            })
-          end,
-        }
       },
     }
 
@@ -199,6 +190,28 @@ function M.setup()
         require("config.test").setup()
       end,
     }
+
+    -- Packer
+    use({
+      "jackMort/ChatGPT.nvim",
+      config = function()
+        require("chatgpt").setup({
+          -- optional configuration
+        })
+      end,
+      cmd = { "ChatGPT" },
+      wants = {
+        "nui.nvim",
+        "plenary.nvim",
+        "telescope.nvim",
+      },
+      requires = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim",
+      }
+    })
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
