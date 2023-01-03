@@ -37,3 +37,6 @@ vim.cmd [[
 -- Better search
 opt.path:remove "/usr/include"
 opt.path:append "**"
+
+-- DB UI
+g.db_ui_save_location = '~/.config/db_ui'

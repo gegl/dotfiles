@@ -191,7 +191,7 @@ function M.setup()
       end,
     }
 
-    -- Packer
+    -- ChatGPT
     use({
       "jackMort/ChatGPT.nvim",
       config = function()
@@ -211,6 +211,10 @@ function M.setup()
         "nvim-telescope/telescope.nvim",
       }
     })
+
+    -- Database
+    use { 'tpope/vim-dadbod' }
+    use { 'kristijanhusak/vim-dadbod-ui' }
 
     -- Bootstrap Neovim
     if packer_bootstrap then

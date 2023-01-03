@@ -2,6 +2,12 @@ local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
+-- DB client
+keymap("n", "<Leader>du", ":DBUIToggle<CR>", default_opts)
+keymap("n", "<Leader>df", ":DBUIFindBuffer<CR>", default_opts)
+keymap("n", "<Leader>dr", ":DBUIRenameBuffer<CR>", default_opts)
+keymap("n", "<Leader>dl", ":DBUILastQueryInfo<CR>", default_opts)
+
 -- Testing
 keymap("n", "<Leader>t", ":TestNearest<CR>", default_opts)
 keymap("n", "<Leader>T", ":TestFile<CR>", default_opts)
