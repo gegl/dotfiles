@@ -230,6 +230,9 @@ function M.setup()
       },
     }
 
+    -- Required for Telescope live_grep. Requires ripgrep to be installed.
+    use { 'BurntSushi/ripgrep' }
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
