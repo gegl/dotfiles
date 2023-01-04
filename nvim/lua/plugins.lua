@@ -71,7 +71,7 @@ function M.setup()
 
     -- Better icons
     use {
-      "kyazdani42/nvim-web-devicons",
+      "nvim-tree/nvim-web-devicons",
       module = "nvim-web-devicons",
       config = function()
         require("nvim-web-devicons").setup { default = true }
@@ -92,7 +92,7 @@ function M.setup()
 
     -- nvim-tree
     use {
-      "kyazdani42/nvim-tree.lua",
+      "nvim-tree/nvim-tree.lua",
       wants = "nvim-web-devicons",
       cmd = { "NvimTreeToggle", "NvimTreeClose" },
       module = "nvim-tree",
@@ -144,7 +144,7 @@ function M.setup()
       config = function()
         require('config.lualine').setup()
       end,
-      requires = { 'kyazdani42/nvim-web-devicons' },
+      requires = { 'nvim-tree/nvim-web-devicons' },
     }
 
     use {
