@@ -202,12 +202,16 @@ function M.setup()
       "neovim/nvim-lspconfig",
       opt = true,
       event = "BufReadPre",
-      wants = { "nvim-lsp-installer" },
+      wants = {
+        "mason.nvim",
+        "mason-lspconfig.nvim",
+      },
       config = function()
         require("config.lsp").setup()
       end,
       requires = {
-        "williamboman/nvim-lsp-installer",
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
       },
     }
 
