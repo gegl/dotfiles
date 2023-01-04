@@ -238,6 +238,7 @@ function M.setup()
     use { "kburdett/vim-nuuid" }
 
     use { 'tpope/vim-fugitive' }
+    use { 'tpope/vim-rhubarb' }
 
     -- Bootstrap Neovim
     if packer_bootstrap then
