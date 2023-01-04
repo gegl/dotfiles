@@ -147,25 +147,6 @@ function M.setup()
       requires = { 'kyazdani42/nvim-web-devicons' },
     }
 
-    -- Completion
-    --
-    -- Note: requires python3-venv, see https://github.com/ms-jpq/coq_nvim#install
-    use {
-      "ms-jpq/coq_nvim",
-      branch = "coq",
-      event = "InsertEnter",
-      opt = true,
-      run = ":COQdeps",
-      config = function()
-        require("config.coq").setup()
-      end,
-      requires = {
-        { "ms-jpq/coq.artifacts", branch = "artifacts" },
-        { "ms-jpq/coq.thirdparty", branch = "3p", module = "coq_3p" },
-      },
-      disable = false,
-    }
-
     use {
       "folke/which-key.nvim",
       config = function()
@@ -231,7 +212,15 @@ function M.setup()
     }
 
     -- Required for Telescope live_grep. Requires ripgrep to be installed.
-    use { 'BurntSushi/ripgrep' }
+    use { "BurntSushi/ripgrep" }
+
+    use({
+      "nvim-treesitter/nvim-treesitter",
+      config = function()
+        require("config.treesitter").setup()
+      end,
+      requires = {"nvim-treesitter/playground"}
+    })
 
     -- Bootstrap Neovim
     if packer_bootstrap then
