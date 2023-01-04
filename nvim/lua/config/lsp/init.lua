@@ -7,7 +7,11 @@ function M.setup()
   }
 
   require("lspconfig").sumneko_lua.setup {}
+
   require("lspconfig").solargraph.setup {}
+
+  -- TODO: missing config ref. https://github.com/hashicorp/terraform-ls/blob/main/docs/USAGE.md#neovim-v080
+  require("lspconfig").terraformls.setup {}
 end
 
 return M
