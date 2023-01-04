@@ -60,15 +60,6 @@ function M.setup()
     -- Always save changes
     use "pocco81/auto-save.nvim"
 
-    -- IndentLine
-    use {
-      "lukas-reineke/indent-blankline.nvim",
-      event = "BufReadPre",
-      config = function()
-        require("config.indentblankline").setup()
-      end,
-    }
-
     -- Better icons
     use {
       "nvim-tree/nvim-web-devicons",
