@@ -234,6 +234,9 @@ function M.setup()
       disable = false,
     }
 
+    -- Generate UUID
+    use { "kburdett/vim-nuuid" }
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"

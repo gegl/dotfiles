@@ -7,6 +7,7 @@ keymap("n", "<Leader>ff", ":Telescope find_files<CR>", default_opts)
 keymap("n", "<Leader>fg", ":Telescope live_grep<CR>", default_opts)
 keymap("n", "<Leader>fb", ":Telescope buffers<CR>", default_opts)
 keymap("n", "<Leader>fh", ":Telescope help_tags<CR>", default_opts)
+keymap("n", "<C-p>", ":Telescope find_files<CR>", default_opts)
 
 -- DB client
 keymap("n", "<Leader>du", ":DBUIToggle<CR>", default_opts)
@@ -21,8 +22,8 @@ keymap("n", "<Leader>a", ":TestSuite<CR>", default_opts)
 keymap("n", "<Leader>l", ":TestLast<CR>", default_opts)
 keymap("n", "<Leader>g", ":TestVisit<CR>", default_opts)
 
--- Open Telescope
-keymap("n", "<C-p>", ":Telescope find_files<CR>", default_opts)
+-- Generate UUID
+keymap("n", "<Leader>u", ":Nuuid<CR>", default_opts)
 
 -- Easier window switching. TODO: C-h conflicts with coq plugin
 keymap("n", "<C-h>", "<C-w>h", default_opts) 
