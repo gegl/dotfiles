@@ -7,6 +7,7 @@ function M.setup()
   }
 
   require("lspconfig").sumneko_lua.setup {}
+  require("lspconfig").solargraph.setup {}
 end
 
 return M
