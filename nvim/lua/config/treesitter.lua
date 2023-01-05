@@ -3,7 +3,7 @@ local M = {}
 function M.setup()
   require'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all"
-    ensure_installed = { "ruby", "lua", "javascript" },
+    ensure_installed = { "ruby", "lua", "javascript", "html", "css" },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,

@@ -237,6 +237,7 @@ function M.setup()
     -- Generate UUID
     use { "kburdett/vim-nuuid" }
 
+    -- Git support
     use { 'tpope/vim-fugitive' }
     use { 'tpope/vim-rhubarb' }
 
