@@ -241,8 +241,13 @@ function M.setup()
     use { 'tpope/vim-fugitive' }
     use { 'tpope/vim-rhubarb' }
 
+    -- File browser in Telescope
+    --
     -- Uses fd-find if installed
     use { "nvim-telescope/telescope-file-browser.nvim" }
+
+    -- Jump to Git respositories on file system
+    use 'cljoly/telescope-repo.nvim'
 
     -- Bootstrap Neovim
     if packer_bootstrap then

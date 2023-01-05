@@ -7,6 +7,7 @@ keymap("n", "<Leader>ff", ":Telescope find_files<CR>", default_opts)
 keymap("n", "<Leader>fg", ":Telescope live_grep<CR>", default_opts)
 keymap("n", "<Leader>fh", ":Telescope help_tags<CR>", default_opts)
 keymap("n", "<Leader>fb", ":Telescope file_browser<CR>", default_opts)
+keymap("n", "<Leader>fr", ":Telescope repo list<CR>", default_opts)
 keymap("n", "<C-p>", ":Telescope find_files<CR>", default_opts)
 
 -- DB client
