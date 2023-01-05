@@ -241,6 +241,9 @@ function M.setup()
     use { 'tpope/vim-fugitive' }
     use { 'tpope/vim-rhubarb' }
 
+    -- Uses fd-find if installed
+    use { "nvim-telescope/telescope-file-browser.nvim" }
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
