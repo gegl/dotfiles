@@ -3,7 +3,9 @@ local M = {}
 function M.setup()
   require'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all"
-    ensure_installed = { "ruby", "lua", "javascript", "html", "css" },
+    --
+    -- Note: may require npm install tree-sitter-cli (e.g. sql)
+    ensure_installed = { "ruby", "lua", "javascript", "html", "css", "sql" },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
