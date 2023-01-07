@@ -2,6 +2,11 @@ local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
+-- Code navigation
+keymap("n", "<Leader>cd", ":Telescope lsp_definitions<CR>", default_opts)
+keymap("n", "<Leader>cr", ":Telescope lsp_references<CR>", default_opts)
+keymap("n", "<Leader>cs", ":Telescope lsp_document_symbols<CR>", default_opts)
+
 -- Telescope
 keymap("n", "<Leader>ff", ":Telescope find_files<CR>", default_opts)
 keymap("n", "<Leader>fi", ":Telescope live_grep<CR>", default_opts)
