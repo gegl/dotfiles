@@ -15,6 +15,15 @@ function M.setup()
         },
       },
     },
+    extensions = {
+      repo = {
+        list = {
+          search_dirs = {
+            "~/dev",
+          },
+        },
+      },
+    },
   }
 
   telescope.load_extension "fzf"
