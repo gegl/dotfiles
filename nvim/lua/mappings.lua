@@ -2,19 +2,27 @@ local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
--- Code navigation
+-- Telescope
+keymap("n", "<Leader>vc", ":Telescope colorscheme<CR>", default_opts)
+
+-- Telescope: code navigation
 keymap("n", "<Leader>cd", ":Telescope lsp_definitions<CR>", default_opts)
 keymap("n", "<Leader>cr", ":Telescope lsp_references<CR>", default_opts)
 keymap("n", "<Leader>cs", ":Telescope lsp_document_symbols<CR>", default_opts)
 
--- Telescope
+-- Telescope: GIT
+keymap("n", "<Leader>gc", ":Telescope git_commits<CR>", default_opts)
+keymap("n", "<Leader>gr", ":Telescope repo list<CR>", default_opts)
+
+-- Telescope: find files
 keymap("n", "<Leader>ff", ":Telescope find_files<CR>", default_opts)
 keymap("n", "<Leader>fi", ":Telescope live_grep<CR>", default_opts)
 keymap("n", "<Leader>fg", ":Telescope git_files<CR>", default_opts)
-keymap("n", "<Leader>fh", ":Telescope help_tags<CR>", default_opts)
 keymap("n", "<Leader>fb", ":Telescope file_browser<CR>", default_opts)
-keymap("n", "<Leader>fr", ":Telescope repo list<CR>", default_opts)
 keymap("n", "<C-p>", ":Telescope find_files<CR>", default_opts)
+
+-- Telescope
+keymap("n", "<Leader>fh", ":Telescope help_tags<CR>", default_opts)
 
 -- DB client
 keymap("n", "<Leader>du", ":DBUIToggle<CR>", default_opts)
@@ -27,7 +35,6 @@ keymap("n", "<Leader>t", ":TestNearest<CR>", default_opts)
 keymap("n", "<Leader>T", ":TestFile<CR>", default_opts)
 keymap("n", "<Leader>a", ":TestSuite<CR>", default_opts)
 keymap("n", "<Leader>l", ":TestLast<CR>", default_opts)
-keymap("n", "<Leader>g", ":TestVisit<CR>", default_opts)
 
 -- Generate UUID
 keymap("n", "<Leader>u", ":Nuuid<CR>", default_opts)
