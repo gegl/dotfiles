@@ -252,6 +252,9 @@ function M.setup()
     -- Beautify Markdown previews
     use { "ellisonleao/glow.nvim" }
 
+    -- Preview binary files
+    use { 'nvim-telescope/telescope-media-files.nvim' }
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
