@@ -249,6 +249,9 @@ function M.setup()
     -- Jump to Git respositories on file system
     use 'cljoly/telescope-repo.nvim'
 
+    -- Beautify Markdown previews
+    use { "ellisonleao/glow.nvim" }
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
