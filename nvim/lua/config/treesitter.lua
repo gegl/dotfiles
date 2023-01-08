@@ -4,6 +4,9 @@ function M.setup()
   require'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all"
     --
+    -- If used embedded in other language, they must be installed upfront. This
+    -- applies to html/css for Lit components and sql used inline in Ruby.
+    --
     -- Note: may require npm install tree-sitter-cli (e.g. sql)
     ensure_installed = { "ruby", "lua", "javascript", "html", "css", "sql" },
 
