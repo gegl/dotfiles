@@ -255,6 +255,9 @@ function M.setup()
     -- Preview binary files
     use { 'nvim-telescope/telescope-media-files.nvim' }
 
+    -- Additional text objects based on treesitter
+    use { 'nvim-treesitter/nvim-treesitter-textobjects' }
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
