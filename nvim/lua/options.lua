@@ -43,5 +43,6 @@ g.db_ui_save_location = '~/.config/db_ui'
 g.db_ui_execute_on_save = false
 
 -- Use system clipboard to make copy/paste between Neovim and OS work better
+-- Requires sudo apt install wl-clipboard on Ubuntu 22.04 (w/Wayland)
 opt.clipboard = "unnamedplus"
 
