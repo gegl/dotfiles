@@ -40,3 +40,4 @@ opt.path:append "**"
 
 -- DB UI
 g.db_ui_save_location = '~/.config/db_ui'
+g.db_ui_execute_on_save = false
