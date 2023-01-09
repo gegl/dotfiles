@@ -41,3 +41,7 @@ opt.path:append "**"
 -- DB UI
 g.db_ui_save_location = '~/.config/db_ui'
 g.db_ui_execute_on_save = false
+
+-- Use system clipboard to make copy/paste between Neovim and OS work better
+opt.clipboard = "unnamedplus"
+
