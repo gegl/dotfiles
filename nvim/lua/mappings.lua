@@ -13,13 +13,7 @@ keymap("n", "<Leader>cs", ":Telescope lsp_document_symbols<CR>", default_opts)
 -- Telescope: GIT
 keymap("n", "<Leader>gc", ":Telescope git_commits<CR>", default_opts)
 keymap("n", "<Leader>gr", ":Telescope repo list<CR>", default_opts)
-
--- Telescope: find files
-keymap("n", "<Leader>ff", ":Telescope find_files<CR>", default_opts)
-keymap("n", "<Leader>fi", ":Telescope live_grep<CR>", default_opts)
-keymap("n", "<Leader>fg", ":Telescope git_files<CR>", default_opts)
-keymap("n", "<Leader>fb", ":Telescope file_browser<CR>", default_opts)
-keymap("n", "<C-p>", ":Telescope find_files<CR>", default_opts)
+-- keymap("n", "<Leader>fg", ":Telescope git_files<CR>", default_opts)
 
 -- Telescope
 keymap("n", "<Leader>fh", ":Telescope help_tags<CR>", default_opts)
