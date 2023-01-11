@@ -20,3 +20,5 @@
 
 [push]
   followTags = true
+[init]
+	defaultBranch = master
