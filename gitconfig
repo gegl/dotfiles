@@ -3,8 +3,8 @@
   email = geir.gluckstad@fitnessgroup.no
 
 [core]
-	excludesfile = ~/.gitignore
-	editor = vim
+  excludesfile = ~/.gitignore
+  editor = nvim
 
 [alias]
   st = status
@@ -17,5 +17,6 @@
   aa = add .
   p  = push
   u  = up
+
 [push]
-	followTags = true
+  followTags = true
