@@ -10,6 +10,9 @@ function M.setup()
 
         " Run all Ruby/rspec tests using docker-compose assuming existence of app service with Ruby image
         let test#ruby#rspec#executable = "docker-compose run --no-deps --rm -v ${PWD}:/app -w /app app bundle exec rspec"
+
+        " Run all JavaScript/mocha tests using docker-cmpose assuming existence of app service with Node image
+        let test#javascript#mocha#executable = "docker-compose run --no-deps --rm -v ${PWD}:/app -w /app app node node_modules/.bin/mocha"
     ]],
     false
   )
