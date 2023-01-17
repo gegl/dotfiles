@@ -39,7 +39,12 @@ function M.setup()
       enable = true
     },
 
+    -- https://github.com/RRethy/nvim-treesitter-endwise
     endwise = {
+      enable = true,
+    },
+
+    indent = {
       enable = true,
     },
 
