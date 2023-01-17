@@ -258,7 +258,11 @@ function M.setup()
     -- Additional text objects based on treesitter
     use { 'RRethy/nvim-treesitter-textsubjects' }
 
+    -- Autoclose/rename HTML tags
     use { 'windwp/nvim-ts-autotag' }
+
+    -- Autoclose based on treesitter
+    use { 'RRethy/nvim-treesitter-endwise' }
 
     -- Bootstrap Neovim
     if packer_bootstrap then

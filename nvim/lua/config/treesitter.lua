@@ -39,6 +39,10 @@ function M.setup()
       enable = true
     },
 
+    endwise = {
+      enable = true,
+    },
+
     -- Not configured: swap/move
     textobjects = {
       select = {
