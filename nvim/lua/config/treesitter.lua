@@ -34,6 +34,11 @@ function M.setup()
       additional_vim_regex_highlighting = false,
     },
 
+    -- Provide autoclose / rename of tags: https://github.com/windwp/nvim-ts-autotag
+    autotag = {
+      enable = true
+    },
+
     -- Not configured: swap/move
     textobjects = {
       select = {

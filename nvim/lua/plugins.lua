@@ -258,6 +258,8 @@ function M.setup()
     -- Additional text objects based on treesitter
     use { 'RRethy/nvim-treesitter-textsubjects' }
 
+    use { 'windwp/nvim-ts-autotag' }
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
