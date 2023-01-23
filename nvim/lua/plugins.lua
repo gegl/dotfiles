@@ -264,6 +264,8 @@ function M.setup()
     -- Autoclose based on treesitter
     use { 'RRethy/nvim-treesitter-endwise' }
 
+    use { 'github/copilot.vim' }
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
