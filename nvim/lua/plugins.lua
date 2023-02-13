@@ -265,7 +265,7 @@ function M.setup()
     use { 'RRethy/nvim-treesitter-endwise' }
 
     use { 'github/copilot.vim' }
-    
+
     -- Markdown preview in browser
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
