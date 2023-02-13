@@ -10,6 +10,7 @@ function M.setup()
     { src = "bc", short_name = "MATH", precision = 6 }, -- Calculator
     { src = "cow", trigger = "!cow" }, -- cow command
     { src = "figlet", trigger = "!big" }, -- figlet command
+    { src = "copilot", short_name = "COP", accept_key = "<c-f>" },
     {
       src = "repl",
       sh = "zsh",
