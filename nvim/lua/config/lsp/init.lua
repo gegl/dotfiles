@@ -6,7 +6,7 @@ function M.setup()
     automatic_installation = true,
   }
 
-  require("lspconfig").sumneko_lua.setup {}
+  require("lspconfig").lua_ls.setup {}
 
   require("lspconfig").solargraph.setup {}
 
