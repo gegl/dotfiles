@@ -269,6 +269,10 @@ function M.setup()
     -- Markdown preview in browser
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
+    -- Required for neotree to work directly after startup i.e. when these are not loaded by other plugins
+    use { 'MunifTanjim/nui.nvim' }
+    use { "nvim-lua/plenary.nvim" }
+
     use {
       "nvim-neo-tree/neo-tree.nvim",
       branch = "v2.x",
