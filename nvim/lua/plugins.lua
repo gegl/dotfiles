@@ -262,6 +262,9 @@ function M.setup()
     use { 'MunifTanjim/nui.nvim' }
     use { "nvim-lua/plenary.nvim" }
 
+    -- Replace nvim-tree filebrowser
+    --
+    -- Note: also capable of displaying other tree structures, see doc
     use {
       "nvim-neo-tree/neo-tree.nvim",
       branch = "v2.x",
