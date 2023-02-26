@@ -81,17 +81,6 @@ function M.setup()
     -- Better surround
     use { "tpope/vim-surround", event = "InsertEnter" }
 
-    -- nvim-tree
-    use {
-      "nvim-tree/nvim-tree.lua",
-      wants = "nvim-web-devicons",
-      cmd = { "NvimTreeToggle", "NvimTreeClose" },
-      module = "nvim-tree",
-      config = function()
-        require("config.nvimtree").setup()
-      end,
-    }
-
     -- Telescope
     use {
       "nvim-telescope/telescope.nvim",
