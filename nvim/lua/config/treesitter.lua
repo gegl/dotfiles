@@ -8,7 +8,7 @@ function M.setup()
     -- applies to html/css for Lit components and sql used inline in Ruby.
     --
     -- Note: may require npm install tree-sitter-cli (e.g. sql)
-    ensure_installed = { "ruby", "lua", "javascript", "html", "css", "sql" },
+    ensure_installed = { "ruby", "lua", "javascript", "html", "css", "sql", "git_rebase", "bash" },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
