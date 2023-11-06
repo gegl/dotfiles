@@ -275,6 +275,18 @@ function M.setup()
       }
     }
 
+    -- Flutter
+    use {
+      "akinsho/flutter-tools.nvim",
+      requires = { "nvim-lua/plenary.nvim" },
+      config = function()
+        require("config.flutter").setup()
+      end,
+    }
+
+    -- Debug adapter protocol, required by Flutter plugin
+    use 'mfussenegger/nvim-dap'
+
     -- Bootstrap Neovim
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
