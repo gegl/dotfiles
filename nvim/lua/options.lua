@@ -53,9 +53,5 @@ vim.cmd [[
   augroup end
 ]]
 
--- Better moved to DB setup
-vim.g.db_ui_save_location = '~/.config/db_ui'
-vim.g.db_ui_execute_on_save = false
-
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
