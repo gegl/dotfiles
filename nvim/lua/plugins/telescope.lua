@@ -135,19 +135,22 @@ local setup = function()
   })
   telescope.load_extension("fzf")
 
-  local nmap = function(key, action, desc)
-    vim.keymap.set("n", key, action, { desc = desc })
-  end
-
-  nmap("<leader><leader>", default_picker, "Telescope")
-  nmap("<leader>f", builtin.oldfiles, "[F]ind recently opened files")
-  nmap("<leader>sb", builtin.current_buffer_fuzzy_find, "[S]earch in current [B]uffer")
-  nmap("<leader>sf", builtin.find_files, "[S]earch [F]iles")
-  nmap("<leader>sh", builtin.help_tags, "[S]earch [H]elp")
-  nmap("<leader>sw", builtin.grep_string, "[S]earch current [W]ord")
-  nmap("<leader>sg", builtin.live_grep, "[S]earch by [G]rep")
-  nmap("<leader>sd", builtin.diagnostics, "[S]earch [D]iagnostics")
-  nmap("<leader>sr", builtin.command_history, "[S]earch command histo[R]y")
+  local wk = require("which-key")
+  wk.register({
+    h = { "<cmd>Telescope help_tags<cr>", "[H]elp" },
+    f = {
+      name = "file",
+      f = { "<cmd>Telescope find_files<cr>", "[F]ind File" },
+      g = { "<cmd>Telescope live_grep<cr>", "[G]rep" },
+      w = { "<cmd>Telescope grep_string<cr>", "Grep Current [W]ord" },
+    },
+    g = {
+      name = "git",
+      s = { "<cmd>Telescope git_status<cr>", "Git [S]tatus" },
+      l = { "<cmd>Telescope git_commits<cr>", "Git [L]og" },
+      b = { "<cmd>Telescope git_branches<cr>", "Git [B]ranches" },
+    },
+  }, { prefix = "<leader>" })
 end
 
 return {

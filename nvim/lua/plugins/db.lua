@@ -12,11 +12,11 @@ return {
     local wk = require("which-key")
     wk.register({
       d = {
-        name = "DB",
-        u = { "<cmd>DBUIToggle<cr>", "Toggle DB UI" },
-        e = { "<Plug>(DBUI_ExecuteQuery)", "Execute SQL" },
-        s = { "<Plug>(DBUI_SaveQuery)", "Save SQL" },
-        b = { "<Plug>(DBUI_EditBindParameters)", "Edit SQL parameters" },
+        name = "db",
+        u = { "<cmd>DBUIToggle<cr>", "Toggle DB [U]I" },
+        e = { "<Plug>(DBUI_ExecuteQuery)", "[E]xecute SQL" },
+        s = { "<Plug>(DBUI_SaveQuery)", "[S]ave SQL" },
+        p = { "<Plug>(DBUI_EditBindParameters)", "Edit SQL [P]arameters" },
       },
     }, { prefix = "<leader>" })
   end,
