@@ -150,6 +150,10 @@ local setup = function()
       l = { "<cmd>Telescope git_commits<cr>", "Git [L]og" },
       b = { "<cmd>Telescope git_branches<cr>", "Git [B]ranches" },
     },
+    u = {
+      name = "utils",
+      c = { "<cmd>Telescope colorscheme<cr>", "Show [C]olorschemes" },
+    },
   }, { prefix = "<leader>" })
 end
 
