@@ -48,6 +48,7 @@ return {
         }),
         sources = cmp.config.sources({
           { name = "copilot", group_index = 2 },
+          { name = "codeium", group_index = 2 },
           { name = "nvim_lsp", group_index = 2 },
           { name = "path", group_index = 2 },
         }, {
@@ -62,6 +63,7 @@ return {
               buffer = 'Ω',
               path = '🖫',
               copilot = '',
+              codeium = ''
             }
 
             item.menu = menu_icon[entry.source.name]
