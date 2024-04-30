@@ -1,6 +1,7 @@
 -- Copied default config from https://github.com/jackMort/ChatGPT.nvim/blob/f1453f588eb47e49e57fa34ac1776b795d71e2f1/lua/chatgpt/config.lua#L10-L182
 return {
   "jackMort/ChatGPT.nvim",
+  enabled = false,
   event = "VeryLazy",
   config = function()
     require("chatgpt").setup({
