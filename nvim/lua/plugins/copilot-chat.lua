@@ -12,18 +12,25 @@ return {
       })
 
       local wk = require("which-key")
+
       wk.register({
         c = {
           name = "chat",
           c = { "<cmd>CopilotChatToggle<CR>", "toggle" },
-          e = { "<cmd>CopilotChatExplain<CR>", "[e]xplain", mode = { "n", "v" } },
-          o = { "<cmd>CopilotChatOptimize<CR>", "[o]ptimize", mode = { "n", "v" } },
-          v = { "<cmd>CopilotChatReview<CR>", "re[v]iew", mode = { "n", "v" } },
-          r = { "<cmd>CopilotChatReset<CR>", "[r]eset", mode = { "n", "v" } },
-          d = { "<cmd>CopilotChatDocs<CR>", "[d]oc", mode = { "n", "v" } },
-          t = { "<cmd>CopilotChatTests<CR>", "[t]est", mode = { "n", "v" } },
+          r = { "<cmd>CopilotChatReset<CR>", "[r]eset" },
         },
-      }, { prefix = "<leader>" })
+      }, { prefix = "<leader>", mode = "n" })
+
+      wk.register({
+        c = {
+          name = "chat",
+          e = { ":'<,'>CopilotChatExplain<CR>", "[e]xplain" },
+          o = { "<cmd>CopilotChatOptimize<CR>", "[o]ptimize" },
+          v = { "<cmd>CopilotChatReview<CR>", "re[v]iew" },
+          d = { "<cmd>CopilotChatDocs<CR>", "[d]oc" },
+          t = { "<cmd>CopilotChatTests<CR>", "[t]est" },
+        },
+      }, { prefix = "<leader>", model = "v" })
     end,
     -- See Commands section for default commands if you want to lazy load on them
   },
