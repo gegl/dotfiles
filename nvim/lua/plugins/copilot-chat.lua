@@ -20,6 +20,8 @@ return {
           o = { "<cmd>CopilotChatOptimize<CR>", "[o]ptimize", mode = { "n", "v" } },
           v = { "<cmd>CopilotChatReview<CR>", "re[v]iew", mode = { "n", "v" } },
           r = { "<cmd>CopilotChatReset<CR>", "[r]eset", mode = { "n", "v" } },
+          d = { "<cmd>CopilotChatDocs<CR>", "[d]oc", mode = { "n", "v" } },
+          t = { "<cmd>CopilotChatTests<CR>", "[t]est", mode = { "n", "v" } },
         },
       }, { prefix = "<leader>" })
     end,
