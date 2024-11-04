@@ -104,13 +104,12 @@ set incsearch
 set nu
 
 " Modify rspec cmd to use docker & rspec
-let g:rubytest_cmd_example = "docker-compose run --no-deps --rm -v $(PWD):/app -w /app ${PWD##*/} bundle exec rspec %p:%c"
-let g:rubytest_cmd_spec = "docker-compose run --no-deps --rm -v $(PWD):/app -w /app ${PWD##*/} bundle exec rspec %p"
+let g:rubytest_cmd_example = "docker compose run --no-deps --rm -v $(PWD):/app -w /app ${PWD##*/} bundle exec rspec %p:%c"
+let g:rubytest_cmd_spec = "docker compose run --no-deps --rm -v $(PWD):/app -w /app ${PWD##*/} bundle exec rspec %p"
 
 " Modify vim-test cmds to run inside Docker using custom transformations
 function! DockerTransform(cmd) abort
-  "return join(["docker-compose run --service-ports --no-deps --rm -v $(PWD):/app -w /app $(basename $(PWD))", a:cmd], " ")
-  return join(["docker-compose run --no-deps --rm app", a:cmd], " ")
+  return join(["docker compose run --no-deps --rm app", a:cmd], " ")
 endfunction
 let g:test#custom_transformations = {'docker': function('DockerTransform')}
 let g:test#transformation = 'docker'
