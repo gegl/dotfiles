@@ -30,7 +30,7 @@ return {
           d = { "<cmd>CopilotChatDocs<CR>", "[d]oc" },
           t = { "<cmd>CopilotChatTests<CR>", "[t]est" },
         },
-      }, { prefix = "<leader>", model = "v" })
+      }, { prefix = "<leader>", mode = "v" })
     end,
     -- See Commands section for default commands if you want to lazy load on them
   },
