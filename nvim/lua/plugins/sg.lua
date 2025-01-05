@@ -1,7 +1,7 @@
 return {
   {
     "sourcegraph/sg.nvim",
-    enabled = false,
+    enabled = true,
     dependencies = { 
       "nvim-lua/plenary.nvim", 
       "nvim-telescope/telescope.nvim" 
