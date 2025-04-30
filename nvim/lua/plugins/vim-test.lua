@@ -10,6 +10,8 @@ return {
     vim.g["test#ruby#rspec#executable"] = "docker compose run --no-deps --rm -v ${PWD}:/app -w /app app bundle exec rspec"
     -- Run all JavaScript/mocha tests using docker compose assuming existence of app service with Node image
     vim.g["test#javascript#mocha#executable"] = "docker compose run --no-deps --rm -v ${PWD}:/app -w /app app node node_modules/.bin/mocha"
+    -- Run all Go tests using docker compose assuming existence of app service with Go image
+    vim.g["test#go#gotest#executable"] = "docker compose run --no-deps --rm -v ${PWD}:/app -w /app --entrypoint '' app go test"
 
     local wk = require("which-key")
     wk.register({
