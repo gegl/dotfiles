@@ -55,3 +55,14 @@ vim.cmd [[
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
+
+-- Tmp Go setup
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "go",
+  callback = function()
+    vim.bo.expandtab = false
+    vim.bo.tabstop = 4
+    vim.bo.shiftwidth = 4
+    vim.bo.softtabstop = 4
+  end,
+})
