@@ -105,3 +105,6 @@ for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
   source "${conf}"
 done
 unset conf
+
+# Created by `pipx` on 2025-05-05 15:13:26
+export PATH="$PATH:/home/geir/.local/bin"
