@@ -4,6 +4,7 @@
   "VectorCode": { "branch": "main", "commit": "7bfcedc238e79ef6005abbb916ad58aca86192ee" },
   "auto-save.nvim": { "branch": "main", "commit": "979b6c82f60cfa80f4cf437d77446d0ded0addf0" },
   "avante.nvim": { "branch": "main", "commit": "e21f1f07bd5282819b2ced170db5da226dfa5c85" },
+  "claude-code.nvim": { "branch": "main", "commit": "ffdf35d8566528cb144d9812eccfecee34502edf" },
   "cmp-buffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b" },
   "cmp-path": { "branch": "main", "commit": "c6635aae33a50d6010bf1aa756ac2398a2d54c32" },
