@@ -1,0 +1,5 @@
+# Ignore the actual secrets file
+.envrc
+
+# Only commit the template
+!.envrc.template
