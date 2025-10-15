@@ -108,3 +108,5 @@ unset conf
 
 # Created by `pipx` on 2025-05-05 15:13:26
 export PATH="$PATH:/home/geir/.local/bin"
+
+alias claude="/home/geir/.claude/local/claude"
