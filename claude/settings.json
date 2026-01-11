@@ -1,7 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "alwaysThinkingEnabled": true,
-
+  "env": {
+    "BASH_DEFAULT_TIMEOUT_MS": "120000"
+  },
   "permissions": {
     "allow": [
       "Read",
@@ -13,7 +14,6 @@
       "WebFetch",
       "Task",
       "NotebookEdit",
-
       "Bash(ls:*)",
       "Bash(pwd)",
       "Bash(which:*)",
@@ -31,7 +31,6 @@
       "Bash(realpath:*)",
       "Bash(dirname:*)",
       "Bash(basename:*)",
-
       "Bash(git status:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",
@@ -54,7 +53,6 @@
       "Bash(git blame:*)",
       "Bash(git shortlog:*)",
       "Bash(gh:*)",
-
       "Bash(make:*)",
       "Bash(npm:*)",
       "Bash(npx:*)",
@@ -63,14 +61,12 @@
       "Bash(node:*)",
       "Bash(bun:*)",
       "Bash(deno:*)",
-
       "Bash(bundle:*)",
       "Bash(ruby:*)",
       "Bash(rake:*)",
       "Bash(rspec:*)",
       "Bash(rails:*)",
       "Bash(gem:*)",
-
       "Bash(python:*)",
       "Bash(python3:*)",
       "Bash(pip:*)",
@@ -78,11 +74,9 @@
       "Bash(uv:*)",
       "Bash(poetry:*)",
       "Bash(pytest:*)",
-
       "Bash(go:*)",
       "Bash(cargo:*)",
       "Bash(rustc:*)",
-
       "Bash(docker compose:*)",
       "Bash(docker ps:*)",
       "Bash(docker logs:*)",
@@ -91,13 +85,11 @@
       "Bash(docker inspect:*)",
       "Bash(docker build:*)",
       "Bash(docker run:*)",
-
       "Bash(kubectl get:*)",
       "Bash(kubectl describe:*)",
       "Bash(kubectl logs:*)",
       "Bash(kubectl config:*)",
       "Bash(kubectl port-forward:*)",
-
       "Bash(curl:*)",
       "Bash(wget:*)",
       "Bash(jq:*)",
@@ -120,7 +112,16 @@
       "Bash(gzip:*)",
       "Bash(gunzip:*)"
     ],
-
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/credentials)",
+      "Read(~/.gnupg/**)",
+      "Read(//etc/shadow)",
+      "Read(//etc/passwd)"
+    ],
     "ask": [
       "Bash(git push:*)",
       "Bash(git push --force:*)",
@@ -136,21 +137,10 @@
       "Bash(kubectl exec:*)",
       "Bash(psql:*)",
       "Bash(clickhouse-client:*)"
-    ],
-
-    "deny": [
-      "Read(./.env)",
-      "Read(./.env.*)",
-      "Read(./secrets/**)",
-      "Read(~/.ssh/**)",
-      "Read(~/.aws/credentials)",
-      "Read(~/.gnupg/**)",
-      "Read(//etc/shadow)",
-      "Read(//etc/passwd)"
     ]
   },
-
-  "env": {
-    "BASH_DEFAULT_TIMEOUT_MS": "120000"
+  "alwaysThinkingEnabled": true,
+  "enabledPlugins": {
+    "credlock@credlock": true
   }
 }
