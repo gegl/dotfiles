@@ -17,3 +17,9 @@ ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
 
 # Copy support for SQL syntax hightlighting inside ruby code
 cp -r ./after ~/.vim
+
+# Claude Code settings (copy if missing, don't symlink - file is modified at runtime)
+mkdir -p ~/.claude
+if [[ ! -f ~/.claude/settings.json ]]; then
+    cp "$DOTFILES_DIR/claude/settings.json" ~/.claude/settings.json
+fi
