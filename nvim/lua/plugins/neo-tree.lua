@@ -12,6 +12,6 @@ return {
     { "<leader>fr", "<cmd>Neotree reveal<cr>", desc = "[R]eveal File" },
   },
   config = function()
-    require("neo-tree").setup()
+    require("neo-tree").setup({})
   end,
 }
