@@ -1,2 +1,4 @@
 log/*
 zsh/config.d/local.zsh
+
+**/.claude/settings.local.json
