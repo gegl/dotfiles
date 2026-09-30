@@ -13,4 +13,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("options")
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+  -- lazy resets the runtimepath, which drops where Ubuntu's package keeps
+  -- Neovim's bundled treesitter parsers (markdown, lua, vimdoc, ...).
+  performance = { rtp = { paths = { "/usr/lib/x86_64-linux-gnu/nvim" } } },
+})

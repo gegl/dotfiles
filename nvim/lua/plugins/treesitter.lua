@@ -1,6 +1,10 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    -- Off: the master branch does not support Neovim 0.12+ and crashes on
+    -- injected code (e.g. a Python heredoc in a shell script). Regex syntax
+    -- highlighting is used instead.
+    enabled = false,
     build = ":TSUpdate",
     config = function ()
       local configs = require("nvim-treesitter.configs")
@@ -29,13 +33,16 @@ return {
     end
   },
   {
-    'RRethy/nvim-treesitter-endwise'
+    'RRethy/nvim-treesitter-endwise',
+    enabled = false,
   },
   {
-    'RRethy/nvim-treesitter-textsubjects'
+    'RRethy/nvim-treesitter-textsubjects',
+    enabled = false,
   },
   {
-    'windwp/nvim-ts-autotag'
+    'windwp/nvim-ts-autotag',
+    enabled = false,
   },
 }
 
